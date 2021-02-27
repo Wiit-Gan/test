@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>步数修改</title>
+</head>
+
+<body>
+    <div class="box">
+        <input type='text' id='tel' placeholder="请输入手机号">
+        <input type='text' id='pws' placeholder="请输入密码">
+        <input type='text' id='step' placeholder="请输入步数">
+        <button>刷取步数</button>
+    </div>
+
+    <script>
+        var tel = document.querySelector('#tel');
+        var pws = document.querySelector('#pws');
+        var step = document.querySelector('#step');
+        var btn = document.querySelector('button');
+        btn.addEventListener('click', function() {
+            console.log(tel.value);
+            location.assign('https://service-2wj4h0le-1252483115.gz.apigw.tencentcs.com/release/helloworld-1614432892?user=' + tel.value + '&password=' + pws.value + '&step=' + step.value + '');
+        })
+    </script>
+
+</body>
+
+</html>
